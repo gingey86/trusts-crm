@@ -1,0 +1,2192 @@
+{
+  "fixtureVersion": 1,
+  "syntheticOnly": true,
+  "referenceToday": "2026-10-13",
+  "organisation": {
+    "id": "meadowbridge",
+    "name": "Meadowbridge Learning Charity",
+    "slug": "meadowbridge",
+    "reportingCurrency": "GBP",
+    "timezone": "Europe/London",
+    "locale": "en-GB",
+    "financialYearStartMonth": 4,
+    "financialYearStartDay": 1,
+    "attentionThresholds": {
+      "upcomingDays": 30,
+      "quietRelationshipDays": 180,
+      "stalledOpportunityDays": 60
+    }
+  },
+  "users": [
+    {
+      "id": "owner",
+      "name": "Morgan Vale",
+      "email": "owner@meadowbridge.invalid",
+      "role": "Owner"
+    },
+    {
+      "id": "admin",
+      "name": "Robin Fen",
+      "email": "admin@meadowbridge.invalid",
+      "role": "Administrator"
+    },
+    {
+      "id": "fundraiser",
+      "name": "Casey Brook",
+      "email": "fundraiser@meadowbridge.invalid",
+      "role": "Fundraiser"
+    },
+    {
+      "id": "reader",
+      "name": "Drew Alder",
+      "email": "reader@meadowbridge.invalid",
+      "role": "Read-only"
+    }
+  ],
+  "financialYears": [
+    {
+      "id": "FY2025",
+      "label": "FY2025",
+      "startDate": "2025-04-01",
+      "endExclusive": "2026-04-01"
+    },
+    {
+      "id": "FY2026",
+      "label": "FY2026",
+      "startDate": "2026-04-01",
+      "endExclusive": "2027-04-01"
+    },
+    {
+      "id": "FY2027",
+      "label": "FY2027",
+      "startDate": "2027-04-01",
+      "endExclusive": "2028-04-01"
+    }
+  ],
+  "budgetFxRateRevisions": [
+    {
+      "id": "FX2025",
+      "financialYearId": "FY2025",
+      "sourceCurrency": "USD",
+      "reportingCurrency": "GBP",
+      "revision": 1,
+      "rate": "0.7500000000",
+      "createdBy": "admin",
+      "createdAt": "2025-04-01T09:00:00Z",
+      "reason": "Synthetic annual budgeting assumption"
+    },
+    {
+      "id": "FX2026",
+      "financialYearId": "FY2026",
+      "sourceCurrency": "USD",
+      "reportingCurrency": "GBP",
+      "revision": 1,
+      "rate": "0.7700000000",
+      "createdBy": "admin",
+      "createdAt": "2026-04-01T09:00:00Z",
+      "reason": "Synthetic annual budgeting assumption"
+    },
+    {
+      "id": "FX2027",
+      "financialYearId": "FY2027",
+      "sourceCurrency": "USD",
+      "reportingCurrency": "GBP",
+      "revision": 1,
+      "rate": "0.8000000000",
+      "createdBy": "admin",
+      "createdAt": "2027-04-01T09:00:00Z",
+      "reason": "Synthetic annual budgeting assumption"
+    }
+  ],
+  "funders": [
+    {
+      "id": "F01",
+      "name": "Alderfen Education Trust",
+      "status": "Prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-1.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "10000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F02",
+      "name": "Bluehaven Learning Foundation",
+      "status": "Active prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-2.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "20000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F03",
+      "name": "Cedarbrook Opportunity Fund",
+      "status": "Current funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-3.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "30000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Invitation",
+      "invitationOnly": true,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F04",
+      "name": "Dovemere Community Trust",
+      "status": "Previous funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-4.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "40000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "No capital expenditure",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F05",
+      "name": "Elmbridge Futures Foundation",
+      "status": "Not currently eligible",
+      "ownerId": "fundraiser",
+      "website": "https://funder-5.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "50000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F06",
+      "name": "Fernstone Skills Trust",
+      "status": "Do not pursue",
+      "ownerId": "fundraiser",
+      "website": "https://funder-6.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "60000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F07",
+      "name": "Glenmere Education Fund",
+      "status": "Current funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-7.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "70000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F08",
+      "name": "Hazelwater Family Foundation",
+      "status": "Active prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-8.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "80000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": "2027-06-01",
+      "restrictions": "No capital expenditure",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F09",
+      "name": "Ivycombe Learning Trust",
+      "status": "Current funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-9.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "90000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F10",
+      "name": "Juniperfield Foundation",
+      "status": "Previous funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-10.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "100000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F11",
+      "name": "Kestrelbank Opportunity Trust",
+      "status": "Not currently eligible",
+      "ownerId": "fundraiser",
+      "website": "https://funder-11.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "110000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F12",
+      "name": "Larkmeadow Community Fund",
+      "status": "Do not pursue",
+      "ownerId": "fundraiser",
+      "website": "https://funder-12.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "120000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "No capital expenditure",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F13",
+      "name": "Mossvale Education Foundation",
+      "status": "Prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-13.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "130000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F14",
+      "name": "Northfern Skills Trust",
+      "status": "Active prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-14.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "140000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F15",
+      "name": "Oakmere Futures Fund",
+      "status": "Current funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-15.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "150000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F16",
+      "name": "Pinehaven Learning Foundation",
+      "status": "Current funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-16.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "160000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "No capital expenditure",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F17",
+      "name": "Quillbrook Family Trust",
+      "status": "Not currently eligible",
+      "ownerId": "fundraiser",
+      "website": "https://funder-17.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "170000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F18",
+      "name": "Reedstone Community Foundation",
+      "status": "Do not pursue",
+      "ownerId": "fundraiser",
+      "website": "https://funder-18.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "180000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F19",
+      "name": "Silverfen Education Fund",
+      "status": "Prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-19.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "190000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F20",
+      "name": "Thistlewater Opportunity Trust",
+      "status": "Active prospect",
+      "ownerId": "fundraiser",
+      "website": "https://funder-20.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "200000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "No capital expenditure",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F21",
+      "name": "Umbervale Learning Foundation",
+      "status": "Current funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-21.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "210000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F22",
+      "name": "Willowbank Skills Fund",
+      "status": "Previous funder",
+      "ownerId": "fundraiser",
+      "website": "https://funder-22.invalid",
+      "type": "Family foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "220000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F23",
+      "name": "Yarrowmere Education Trust",
+      "status": "Not currently eligible",
+      "ownerId": "fundraiser",
+      "website": "https://funder-23.invalid",
+      "type": "Charitable trust",
+      "themes": [
+        "Education",
+        "Adult learning"
+      ],
+      "geographies": [
+        "UK",
+        "Rural communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "230000.0000",
+      "typicalCurrency": "GBP",
+      "applicationMethod": "Online form",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "Education and learning purposes",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": null
+    },
+    {
+      "id": "F24",
+      "name": "Zephyrfield Community Foundation",
+      "status": "Do not pursue",
+      "ownerId": "fundraiser",
+      "website": "https://funder-24.invalid",
+      "type": "Corporate foundation",
+      "themes": [
+        "Education",
+        "Skills"
+      ],
+      "geographies": [
+        "UK",
+        "Urban communities"
+      ],
+      "typicalMin": "5000.0000",
+      "typicalMax": "240000.0000",
+      "typicalCurrency": "USD",
+      "applicationMethod": "Email proposal",
+      "invitationOnly": false,
+      "reapplyAfter": null,
+      "restrictions": "No capital expenditure",
+      "notes": "Entirely fictional synthetic funder.",
+      "archivedAt": "2026-08-01T10:00:00Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "C01",
+      "name": "Ellis Field 1",
+      "jobTitle": "Programme officer",
+      "email": "officer-1@funder-1.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C02",
+      "name": "Avery Stone 2",
+      "jobTitle": "Programme officer",
+      "email": "officer-2@funder-2.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C03",
+      "name": "Sage Wood 3",
+      "jobTitle": "Programme officer",
+      "email": "officer-3@funder-3.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C04",
+      "name": "Rowan Marsh 4",
+      "jobTitle": "Programme officer",
+      "email": "officer-4@funder-4.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C05",
+      "name": "Ellis Field 5",
+      "jobTitle": "Programme officer",
+      "email": "officer-5@funder-5.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C06",
+      "name": "Avery Stone 6",
+      "jobTitle": "Programme officer",
+      "email": "officer-6@funder-6.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C07",
+      "name": "Sage Wood 7",
+      "jobTitle": "Programme officer",
+      "email": "officer-7@funder-7.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C08",
+      "name": "Rowan Marsh 8",
+      "jobTitle": "Programme officer",
+      "email": "officer-8@funder-8.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C09",
+      "name": "Ellis Field 9",
+      "jobTitle": "Programme officer",
+      "email": "officer-9@funder-9.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C10",
+      "name": "Avery Stone 10",
+      "jobTitle": "Programme officer",
+      "email": "officer-10@funder-10.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C11",
+      "name": "Sage Wood 11",
+      "jobTitle": "Programme officer",
+      "email": "officer-11@funder-11.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    },
+    {
+      "id": "C12",
+      "name": "Rowan Marsh 12",
+      "jobTitle": "Programme officer",
+      "email": "officer-12@funder-12.invalid",
+      "status": "Active",
+      "notes": "Fictional contact"
+    }
+  ],
+  "contactAffiliations": [
+    {
+      "id": "CF01",
+      "contactId": "C01",
+      "funderId": "F01",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF02",
+      "contactId": "C02",
+      "funderId": "F02",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF03",
+      "contactId": "C03",
+      "funderId": "F03",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF04",
+      "contactId": "C04",
+      "funderId": "F04",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF05",
+      "contactId": "C05",
+      "funderId": "F05",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF06",
+      "contactId": "C06",
+      "funderId": "F06",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF07",
+      "contactId": "C07",
+      "funderId": "F07",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF08",
+      "contactId": "C08",
+      "funderId": "F08",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF09",
+      "contactId": "C09",
+      "funderId": "F09",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF10",
+      "contactId": "C10",
+      "funderId": "F10",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF11",
+      "contactId": "C11",
+      "funderId": "F11",
+      "startDate": "2025-01-01",
+      "endDate": null
+    },
+    {
+      "id": "CF12",
+      "contactId": "C12",
+      "funderId": "F12",
+      "startDate": "2025-01-01",
+      "endDate": null
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "O01",
+      "funderId": "F01",
+      "title": "Adult learning places round 1",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Research",
+      "estimatedAmount": "17500.0000",
+      "currency": "GBP",
+      "probability": "0.1000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-01-20",
+      "plannedSubmissionDate": "2026-01-15",
+      "expectedDecisionDate": "2027-01-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O02",
+      "funderId": "F02",
+      "title": "Community tutor training round 2",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Qualified",
+      "estimatedAmount": "20000.0000",
+      "currency": "GBP",
+      "probability": "0.3000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-02-20",
+      "plannedSubmissionDate": "2026-02-15",
+      "expectedDecisionDate": "2027-02-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O03",
+      "funderId": "F03",
+      "title": "Learning access programme round 3",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Cultivation",
+      "estimatedAmount": "22500.0000",
+      "currency": "USD",
+      "probability": "0.4000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-03-20",
+      "plannedSubmissionDate": "2026-03-15",
+      "expectedDecisionDate": "2027-03-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O04",
+      "funderId": "F04",
+      "title": "Adult learning places round 4",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Preparing",
+      "estimatedAmount": "25000.0000",
+      "currency": "GBP",
+      "probability": "0.6000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "High",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-04-20",
+      "plannedSubmissionDate": "2026-04-15",
+      "expectedDecisionDate": "2027-04-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O05",
+      "funderId": "F05",
+      "title": "Community tutor training round 5",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Submitted",
+      "estimatedAmount": "27500.0000",
+      "currency": "GBP",
+      "probability": "0.7000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-05-20",
+      "plannedSubmissionDate": "2026-05-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O06",
+      "funderId": "F06",
+      "title": "Learning access programme round 6",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Decision due",
+      "estimatedAmount": "30000.0000",
+      "currency": "USD",
+      "probability": "0.7000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-06-20",
+      "plannedSubmissionDate": "2026-06-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O07",
+      "funderId": "F07",
+      "title": "Adult learning places round 7",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Won",
+      "estimatedAmount": "32500.0000",
+      "currency": "GBP",
+      "probability": "1.0000",
+      "planningFinancialYearId": "FY2025",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2025-06-20",
+      "plannedSubmissionDate": "2025-06-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O08",
+      "funderId": "F08",
+      "title": "Community tutor training round 8",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Lost",
+      "estimatedAmount": "35000.0000",
+      "currency": "GBP",
+      "probability": "0.0000",
+      "planningFinancialYearId": "FY2025",
+      "priority": "High",
+      "restriction": "Restricted",
+      "applicationDeadline": "2025-06-20",
+      "plannedSubmissionDate": "2025-06-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O09",
+      "funderId": "F09",
+      "title": "Learning access programme round 9",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Withdrawn",
+      "estimatedAmount": "37500.0000",
+      "currency": "USD",
+      "probability": "0.0000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-09-20",
+      "plannedSubmissionDate": "2026-09-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O10",
+      "funderId": "F10",
+      "title": "Adult learning places round 10",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Research",
+      "estimatedAmount": "40000.0000",
+      "currency": "GBP",
+      "probability": "0.1000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-10-20",
+      "plannedSubmissionDate": "2026-10-15",
+      "expectedDecisionDate": "2027-04-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O11",
+      "funderId": "F11",
+      "title": "Community tutor training round 11",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Qualified",
+      "estimatedAmount": "42500.0000",
+      "currency": "GBP",
+      "probability": "0.3000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-11-20",
+      "plannedSubmissionDate": "2026-11-15",
+      "expectedDecisionDate": "2027-05-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O12",
+      "funderId": "F12",
+      "title": "Learning access programme round 12",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Cultivation",
+      "estimatedAmount": "45000.0000",
+      "currency": "USD",
+      "probability": "0.4000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "High",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-12-20",
+      "plannedSubmissionDate": "2026-12-15",
+      "expectedDecisionDate": "2027-06-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O13",
+      "funderId": "F13",
+      "title": "Adult learning places round 13",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Preparing",
+      "estimatedAmount": "47500.0000",
+      "currency": "GBP",
+      "probability": "0.6000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-01-20",
+      "plannedSubmissionDate": "2026-01-15",
+      "expectedDecisionDate": "2027-01-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O14",
+      "funderId": "F14",
+      "title": "Community tutor training round 14",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Submitted",
+      "estimatedAmount": "50000.0000",
+      "currency": "GBP",
+      "probability": "0.7000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-05-20",
+      "plannedSubmissionDate": "2026-05-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O15",
+      "funderId": "F15",
+      "title": "Learning access programme round 15",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Decision due",
+      "estimatedAmount": "52500.0000",
+      "currency": "USD",
+      "probability": "0.7000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-06-20",
+      "plannedSubmissionDate": "2026-06-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O16",
+      "funderId": "F16",
+      "title": "Adult learning places round 16",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Won",
+      "estimatedAmount": "55000.0000",
+      "currency": "GBP",
+      "probability": "1.0000",
+      "planningFinancialYearId": "FY2025",
+      "priority": "High",
+      "restriction": "Restricted",
+      "applicationDeadline": "2025-06-20",
+      "plannedSubmissionDate": "2025-06-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O17",
+      "funderId": "F17",
+      "title": "Community tutor training round 17",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Lost",
+      "estimatedAmount": "57500.0000",
+      "currency": "GBP",
+      "probability": "0.0000",
+      "planningFinancialYearId": "FY2025",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2025-06-20",
+      "plannedSubmissionDate": "2025-06-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": "2026-09-01T12:00:00Z"
+    },
+    {
+      "id": "O18",
+      "funderId": "F18",
+      "title": "Learning access programme round 18",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Withdrawn",
+      "estimatedAmount": "60000.0000",
+      "currency": "USD",
+      "probability": "0.0000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-09-20",
+      "plannedSubmissionDate": "2026-09-15",
+      "expectedDecisionDate": null,
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O19",
+      "funderId": "F19",
+      "title": "Adult learning places round 19",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Research",
+      "estimatedAmount": "62500.0000",
+      "currency": "GBP",
+      "probability": "0.1000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-07-20",
+      "plannedSubmissionDate": "2026-07-15",
+      "expectedDecisionDate": "2027-01-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O20",
+      "funderId": "F20",
+      "title": "Community tutor training round 20",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Qualified",
+      "estimatedAmount": "65000.0000",
+      "currency": "EUR",
+      "probability": "0.3000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "High",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-08-20",
+      "plannedSubmissionDate": "2026-08-15",
+      "expectedDecisionDate": "2027-02-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O21",
+      "funderId": "F21",
+      "title": "Learning access programme round 21",
+      "purpose": "Fictional community learning support",
+      "ownerId": "fundraiser",
+      "stage": "Cultivation",
+      "estimatedAmount": "67500.0000",
+      "currency": "USD",
+      "probability": "0.4000",
+      "planningFinancialYearId": "FY2026",
+      "priority": "Normal",
+      "restriction": "Restricted",
+      "applicationDeadline": "2026-09-20",
+      "plannedSubmissionDate": "2026-09-15",
+      "expectedDecisionDate": "2027-03-10",
+      "notes": "Synthetic workflow example",
+      "archivedAt": null
+    },
+    {
+      "id": "O22",
+      "funderId": "F19",
+      "title": "Conversion probe GBP",
+      "ownerId": "fundraiser",
+      "stage": "Qualified",
+      "estimatedAmount": "10000.0000",
+      "currency": "GBP",
+      "probability": "0.5000",
+      "planningFinancialYearId": "FY2026",
+      "applicationDeadline": "2026-12-15",
+      "plannedSubmissionDate": "2026-12-01",
+      "expectedDecisionDate": "2027-02-15",
+      "restriction": "Unrestricted",
+      "priority": "Normal",
+      "notes": "Known-number FX acceptance probe."
+    },
+    {
+      "id": "O23",
+      "funderId": "F20",
+      "title": "Conversion probe USD",
+      "ownerId": "fundraiser",
+      "stage": "Qualified",
+      "estimatedAmount": "10000.0000",
+      "currency": "USD",
+      "probability": "0.5000",
+      "planningFinancialYearId": "FY2026",
+      "applicationDeadline": "2026-12-15",
+      "plannedSubmissionDate": "2026-12-01",
+      "expectedDecisionDate": "2027-02-15",
+      "restriction": "Unrestricted",
+      "priority": "Normal",
+      "notes": "Known-number FX acceptance probe."
+    },
+    {
+      "id": "O24",
+      "funderId": "F21",
+      "title": "Conversion probe EUR",
+      "ownerId": "fundraiser",
+      "stage": "Qualified",
+      "estimatedAmount": "10000.0000",
+      "currency": "EUR",
+      "probability": "0.5000",
+      "planningFinancialYearId": "FY2026",
+      "applicationDeadline": "2026-12-15",
+      "plannedSubmissionDate": "2026-12-01",
+      "expectedDecisionDate": "2027-02-15",
+      "restriction": "Unrestricted",
+      "priority": "Normal",
+      "notes": "Known-number FX acceptance probe."
+    }
+  ],
+  "applications": [
+    {
+      "id": "A05",
+      "opportunityId": "O05",
+      "versionLabel": "1",
+      "submittedDate": "2026-05-15",
+      "requestedAmount": "27500.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2026",
+      "expectedDecisionDate": "2026-10-28",
+      "decisionStatus": "Pending",
+      "decisionDate": null,
+      "feedback": null,
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    },
+    {
+      "id": "A06",
+      "opportunityId": "O06",
+      "versionLabel": "1",
+      "submittedDate": "2026-06-15",
+      "requestedAmount": "30000.0000",
+      "currency": "USD",
+      "planningFinancialYearId": "FY2026",
+      "expectedDecisionDate": "2026-11-28",
+      "decisionStatus": "Pending",
+      "decisionDate": null,
+      "feedback": null,
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    },
+    {
+      "id": "A07",
+      "opportunityId": "O07",
+      "versionLabel": "1",
+      "submittedDate": "2025-06-15",
+      "requestedAmount": "32500.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2025",
+      "expectedDecisionDate": null,
+      "decisionStatus": "Successful",
+      "decisionDate": "2025-08-15",
+      "feedback": null,
+      "awardedAmount": "32500.0000",
+      "awardCurrency": "GBP",
+      "awardPlanningFinancialYearId": "FY2025",
+      "archivedAt": null
+    },
+    {
+      "id": "A08",
+      "opportunityId": "O08",
+      "versionLabel": "1",
+      "submittedDate": "2025-06-15",
+      "requestedAmount": "35000.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2025",
+      "expectedDecisionDate": null,
+      "decisionStatus": "Rejected",
+      "decisionDate": "2025-08-15",
+      "feedback": "Fictional rejection: proposal outside current priorities.",
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    },
+    {
+      "id": "A09",
+      "opportunityId": "O09",
+      "versionLabel": "1",
+      "submittedDate": "2026-09-15",
+      "requestedAmount": "37500.0000",
+      "currency": "USD",
+      "planningFinancialYearId": "FY2026",
+      "expectedDecisionDate": null,
+      "decisionStatus": "Withdrawn",
+      "decisionDate": "2026-09-30",
+      "feedback": null,
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    },
+    {
+      "id": "A14",
+      "opportunityId": "O14",
+      "versionLabel": "1",
+      "submittedDate": "2026-05-15",
+      "requestedAmount": "50000.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2026",
+      "expectedDecisionDate": "2026-11-28",
+      "decisionStatus": "Pending",
+      "decisionDate": null,
+      "feedback": null,
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    },
+    {
+      "id": "A15",
+      "opportunityId": "O15",
+      "versionLabel": "1",
+      "submittedDate": "2026-06-15",
+      "requestedAmount": "52500.0000",
+      "currency": "USD",
+      "planningFinancialYearId": "FY2026",
+      "expectedDecisionDate": "2026-10-28",
+      "decisionStatus": "Pending",
+      "decisionDate": null,
+      "feedback": null,
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    },
+    {
+      "id": "A16",
+      "opportunityId": "O16",
+      "versionLabel": "1",
+      "submittedDate": "2025-06-15",
+      "requestedAmount": "55000.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2025",
+      "expectedDecisionDate": null,
+      "decisionStatus": "Successful",
+      "decisionDate": "2025-08-15",
+      "feedback": null,
+      "awardedAmount": "55000.0000",
+      "awardCurrency": "GBP",
+      "awardPlanningFinancialYearId": "FY2025",
+      "archivedAt": null
+    },
+    {
+      "id": "A17",
+      "opportunityId": "O17",
+      "versionLabel": "1",
+      "submittedDate": "2025-06-15",
+      "requestedAmount": "57500.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2025",
+      "expectedDecisionDate": null,
+      "decisionStatus": "Rejected",
+      "decisionDate": "2025-08-15",
+      "feedback": "Fictional rejection: proposal outside current priorities.",
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": "2026-09-01T12:00:00Z"
+    },
+    {
+      "id": "A18",
+      "opportunityId": "O18",
+      "versionLabel": "1",
+      "submittedDate": "2026-09-15",
+      "requestedAmount": "60000.0000",
+      "currency": "USD",
+      "planningFinancialYearId": "FY2026",
+      "expectedDecisionDate": null,
+      "decisionStatus": "Withdrawn",
+      "decisionDate": "2026-09-30",
+      "feedback": null,
+      "awardedAmount": null,
+      "awardCurrency": null,
+      "awardPlanningFinancialYearId": null,
+      "archivedAt": null
+    }
+  ],
+  "grants": [
+    {
+      "id": "G01",
+      "applicationId": "A07",
+      "funderId": "F07",
+      "title": "Adult learning places round 7 award",
+      "ownerId": "fundraiser",
+      "purpose": "Fictional community learning support",
+      "awardedAmount": "32500.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2025",
+      "status": "Active",
+      "startDate": "2025-11-01",
+      "endDate": "2027-12-31",
+      "restriction": "Restricted"
+    },
+    {
+      "id": "G02",
+      "applicationId": "A16",
+      "funderId": "F16",
+      "title": "Adult learning places round 16 award",
+      "ownerId": "fundraiser",
+      "purpose": "Fictional community learning support",
+      "awardedAmount": "55000.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2025",
+      "status": "Active",
+      "startDate": "2025-11-01",
+      "endDate": "2027-12-31",
+      "restriction": "Restricted"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "B01",
+      "grantId": "G01",
+      "title": "Interim narrative report",
+      "type": "Interim report",
+      "dueDate": "2026-01-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Complete",
+      "completedDate": "2026-01-24",
+      "submittedDate": "2026-01-23",
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B02",
+      "grantId": "G02",
+      "title": "Payment claim",
+      "type": "Payment request",
+      "dueDate": "2026-02-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Complete",
+      "completedDate": "2026-02-24",
+      "submittedDate": "2026-02-23",
+      "paymentAmount": "10000.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2026"
+    },
+    {
+      "id": "B03",
+      "grantId": "G01",
+      "title": "Financial return",
+      "type": "Financial report",
+      "dueDate": "2026-03-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Complete",
+      "completedDate": "2026-03-24",
+      "submittedDate": "2026-03-23",
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B04",
+      "grantId": "G02",
+      "title": "Monitoring update",
+      "type": "Monitoring return",
+      "dueDate": "2026-04-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Submitted",
+      "completedDate": null,
+      "submittedDate": "2026-04-23",
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B05",
+      "grantId": "G01",
+      "title": "Renewal discussion",
+      "type": "Renewal/reapplication",
+      "dueDate": "2026-05-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B06",
+      "grantId": "G02",
+      "title": "Final report",
+      "type": "Final report",
+      "dueDate": "2026-06-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B07",
+      "grantId": "G01",
+      "title": "Interim narrative report",
+      "type": "Interim report",
+      "dueDate": "2026-07-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B08",
+      "grantId": "G02",
+      "title": "Payment claim",
+      "type": "Payment request",
+      "dueDate": "2026-08-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": "10000.0000",
+      "currency": "GBP",
+      "planningFinancialYearId": "FY2026"
+    },
+    {
+      "id": "B09",
+      "grantId": "G01",
+      "title": "Financial return",
+      "type": "Financial report",
+      "dueDate": "2026-09-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B10",
+      "grantId": "G02",
+      "title": "Monitoring update",
+      "type": "Monitoring return",
+      "dueDate": "2026-10-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B11",
+      "grantId": "G01",
+      "title": "Renewal discussion",
+      "type": "Renewal/reapplication",
+      "dueDate": "2026-11-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    },
+    {
+      "id": "B12",
+      "grantId": "G02",
+      "title": "Final report",
+      "type": "Final report",
+      "dueDate": "2026-12-25",
+      "responsibleUserId": "fundraiser",
+      "status": "Upcoming",
+      "completedDate": null,
+      "submittedDate": null,
+      "paymentAmount": null,
+      "currency": null,
+      "planningFinancialYearId": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "Check funding priorities",
+      "ownerId": "fundraiser",
+      "status": "Complete",
+      "priority": "Normal",
+      "dueDate": "2026-01-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O01",
+      "completedDate": "2026-01-11"
+    },
+    {
+      "id": "T02",
+      "title": "Draft proposal summary",
+      "ownerId": "fundraiser",
+      "status": "Complete",
+      "priority": "Normal",
+      "dueDate": "2026-02-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O02",
+      "completedDate": "2026-02-11"
+    },
+    {
+      "id": "T03",
+      "title": "Arrange programme officer call",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "High",
+      "dueDate": "2026-03-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O03",
+      "completedDate": null
+    },
+    {
+      "id": "T04",
+      "title": "Collect report evidence",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "Normal",
+      "dueDate": "2026-04-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O04",
+      "completedDate": null
+    },
+    {
+      "id": "T05",
+      "title": "Check funding priorities",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "Normal",
+      "dueDate": "2026-05-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O05",
+      "completedDate": null
+    },
+    {
+      "id": "T06",
+      "title": "Draft proposal summary",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "High",
+      "dueDate": "2026-06-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O06",
+      "completedDate": null
+    },
+    {
+      "id": "T07",
+      "title": "Arrange programme officer call",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "Normal",
+      "dueDate": "2026-07-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O07",
+      "completedDate": null
+    },
+    {
+      "id": "T08",
+      "title": "Collect report evidence",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "Normal",
+      "dueDate": "2026-08-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O08",
+      "completedDate": null
+    },
+    {
+      "id": "T09",
+      "title": "Check funding priorities",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "High",
+      "dueDate": "2026-09-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O09",
+      "completedDate": null
+    },
+    {
+      "id": "T10",
+      "title": "Draft proposal summary",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "Normal",
+      "dueDate": "2026-10-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O10",
+      "completedDate": null
+    },
+    {
+      "id": "T11",
+      "title": "Arrange programme officer call",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "Normal",
+      "dueDate": "2026-11-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O11",
+      "completedDate": null
+    },
+    {
+      "id": "T12",
+      "title": "Collect report evidence",
+      "ownerId": "fundraiser",
+      "status": "Open",
+      "priority": "High",
+      "dueDate": "2026-12-12",
+      "relatedType": "Opportunity",
+      "relatedId": "O12",
+      "completedDate": null
+    }
+  ],
+  "nextActions": [
+    {
+      "opportunityId": "O03",
+      "taskId": "T03"
+    },
+    {
+      "opportunityId": "O04",
+      "taskId": "T04"
+    },
+    {
+      "opportunityId": "O10",
+      "taskId": "T10"
+    },
+    {
+      "opportunityId": "O11",
+      "taskId": "T11"
+    },
+    {
+      "opportunityId": "O12",
+      "taskId": "T12"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "I01",
+      "funderId": "F01",
+      "contactIds": [
+        "C01"
+      ],
+      "contactAffiliationIds": [
+        "CF01"
+      ],
+      "occurredDate": "2026-01-05",
+      "type": "Email",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O01"
+    },
+    {
+      "id": "I02",
+      "funderId": "F02",
+      "contactIds": [
+        "C02"
+      ],
+      "contactAffiliationIds": [
+        "CF02"
+      ],
+      "occurredDate": "2026-02-05",
+      "type": "Telephone",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O02"
+    },
+    {
+      "id": "I03",
+      "funderId": "F03",
+      "contactIds": [
+        "C03"
+      ],
+      "contactAffiliationIds": [
+        "CF03"
+      ],
+      "occurredDate": "2026-03-05",
+      "type": "Meeting",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O03"
+    },
+    {
+      "id": "I04",
+      "funderId": "F04",
+      "contactIds": [
+        "C04"
+      ],
+      "contactAffiliationIds": [
+        "CF04"
+      ],
+      "occurredDate": "2026-04-05",
+      "type": "Introduction",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O04"
+    },
+    {
+      "id": "I05",
+      "funderId": "F05",
+      "contactIds": [
+        "C05"
+      ],
+      "contactAffiliationIds": [
+        "CF05"
+      ],
+      "occurredDate": "2026-05-05",
+      "type": "Email",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O05"
+    },
+    {
+      "id": "I06",
+      "funderId": "F06",
+      "contactIds": [
+        "C06"
+      ],
+      "contactAffiliationIds": [
+        "CF06"
+      ],
+      "occurredDate": "2026-06-05",
+      "type": "Telephone",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O06"
+    },
+    {
+      "id": "I07",
+      "funderId": "F07",
+      "contactIds": [
+        "C07"
+      ],
+      "contactAffiliationIds": [
+        "CF07"
+      ],
+      "occurredDate": "2026-07-05",
+      "type": "Meeting",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O07"
+    },
+    {
+      "id": "I08",
+      "funderId": "F08",
+      "contactIds": [
+        "C08"
+      ],
+      "contactAffiliationIds": [
+        "CF08"
+      ],
+      "occurredDate": "2026-08-05",
+      "type": "Introduction",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O08"
+    },
+    {
+      "id": "I09",
+      "funderId": "F09",
+      "contactIds": [
+        "C09"
+      ],
+      "contactAffiliationIds": [
+        "CF09"
+      ],
+      "occurredDate": "2026-09-05",
+      "type": "Email",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O09"
+    },
+    {
+      "id": "I10",
+      "funderId": "F10",
+      "contactIds": [
+        "C10"
+      ],
+      "contactAffiliationIds": [
+        "CF10"
+      ],
+      "occurredDate": "2026-10-05",
+      "type": "Telephone",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O10"
+    },
+    {
+      "id": "I11",
+      "funderId": "F11",
+      "contactIds": [
+        "C11"
+      ],
+      "contactAffiliationIds": [
+        "CF11"
+      ],
+      "occurredDate": "2026-09-05",
+      "type": "Meeting",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O11"
+    },
+    {
+      "id": "I12",
+      "funderId": "F12",
+      "contactIds": [
+        "C12"
+      ],
+      "contactAffiliationIds": [
+        "CF12"
+      ],
+      "occurredDate": "2026-09-08",
+      "type": "Introduction",
+      "summary": "Fictional discussion of programme fit and application timing.",
+      "userId": "fundraiser",
+      "opportunityId": "O12"
+    }
+  ],
+  "opportunityContacts": [
+    {
+      "opportunityId": "O01",
+      "contactId": "C01"
+    },
+    {
+      "opportunityId": "O02",
+      "contactId": "C02"
+    },
+    {
+      "opportunityId": "O03",
+      "contactId": "C03"
+    },
+    {
+      "opportunityId": "O04",
+      "contactId": "C04"
+    },
+    {
+      "opportunityId": "O05",
+      "contactId": "C05"
+    },
+    {
+      "opportunityId": "O06",
+      "contactId": "C06"
+    },
+    {
+      "opportunityId": "O07",
+      "contactId": "C07"
+    },
+    {
+      "opportunityId": "O08",
+      "contactId": "C08"
+    },
+    {
+      "opportunityId": "O09",
+      "contactId": "C09"
+    },
+    {
+      "opportunityId": "O10",
+      "contactId": "C10"
+    },
+    {
+      "opportunityId": "O11",
+      "contactId": "C11"
+    },
+    {
+      "opportunityId": "O12",
+      "contactId": "C12"
+    }
+  ],
+  "grantContacts": [
+    {
+      "grantId": "G01",
+      "contactId": "C07"
+    }
+  ],
+  "documents": [
+    {
+      "id": "D01",
+      "filename": "fictional-award-note.txt",
+      "mimeType": "text/plain",
+      "syntheticText": "Fictional award note for synthetic testing only. No real charity data.\n",
+      "links": [
+        {
+          "type": "Application",
+          "id": "A07"
+        },
+        {
+          "type": "Grant",
+          "id": "G01"
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "filename": "fictional-report.txt",
+      "mimeType": "text/plain",
+      "syntheticText": "Fictional completed report for synthetic testing only.\n",
+      "links": [
+        {
+          "type": "Obligation",
+          "id": "B01"
+        }
+      ]
+    }
+  ],
+  "isolationSentinel": {
+    "organisation": {
+      "id": "isolation-sentinel",
+      "slug": "isolation-sentinel",
+      "name": "Synthetic Isolation Sentinel",
+      "reportingCurrency": "USD",
+      "timezone": "UTC",
+      "locale": "en-GB",
+      "financialYearStartMonth": 1,
+      "financialYearStartDay": 1,
+      "attentionThresholds": {
+        "upcomingDays": 30,
+        "quietRelationshipDays": 180,
+        "stalledOpportunityDays": 60
+      }
+    },
+    "users": [
+      {
+        "id": "sentinel-owner",
+        "name": "Test Sentinel",
+        "email": "owner@sentinel.invalid",
+        "role": "Owner"
+      }
+    ],
+    "funders": [
+      {
+        "id": "F01",
+        "name": "Other Tenant Secret Sentinel Funder",
+        "status": "Prospect"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "T01",
+        "title": "Other Tenant Secret Sentinel Task",
+        "ownerId": "sentinel-owner",
+        "status": "Open",
+        "dueDate": "2026-12-01"
+      }
+    ],
+    "documents": [
+      {
+        "id": "D01",
+        "filename": "sentinel-only.txt",
+        "mimeType": "text/plain",
+        "syntheticText": "Other tenant private synthetic sentinel.\n",
+        "links": [
+          {
+            "type": "Funder",
+            "id": "F01"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+# Portable pre-build contract. App/operator require source, migrations and
+# scripts to be implemented; see docs/development/environment.md.
+# Bundled DB: --profile local-db. External DB: omit that profile.
+# Setup selects profiles and prepares credentials before invoking Compose.
+# Image versions, healthcheck timings and log sizes are initial operational
+# choices; validate and adjust them during implementation/deployment.
+x-runtime-env: &runtime-env
+  NODE_ENV: production
+  APP_ENV: ${APP_ENV:-development}
+  DEPLOYMENT_MODE: ${DEPLOYMENT_MODE:-self-hosted}
+  APP_VERSION: ${APP_VERSION:-0.0.1-prebuild}
+  APP_URL: ${APP_URL:?Configure APP_URL}
+  BETTER_AUTH_URL: ${BETTER_AUTH_URL:?Configure BETTER_AUTH_URL}
+  BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?Configure BETTER_AUTH_SECRET}
+  CONTROL_DATABASE_URL: ${CONTROL_DATABASE_URL:?Configure restricted control DB URL}
+  TENANT_CREDENTIALS_DIR: ${TENANT_CREDENTIALS_DIR:-/run/trusts/tenants}
+  STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
+  STORAGE_ROOT: ${STORAGE_ROOT:-/var/lib/trusts-crm/attachments}
+  MAX_UPLOAD_BYTES: ${MAX_UPLOAD_BYTES:-20971520}
+  MAX_IMPORT_BYTES: ${MAX_IMPORT_BYTES:-5242880}
+  SMTP_HOST: ${SMTP_HOST:?Configure SMTP_HOST}
+  SMTP_PORT: ${SMTP_PORT:-1025}
+  SMTP_SECURE: ${SMTP_SECURE:-false}
+  SMTP_USER: ${SMTP_USER:-}
+  SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+  SMTP_FROM: ${SMTP_FROM:?Configure SMTP_FROM}
+  DEFAULT_TIMEZONE: ${DEFAULT_TIMEZONE:-Europe/London}
+  DEFAULT_LOCALE: ${DEFAULT_LOCALE:-en-GB}
+  LOG_LEVEL: ${LOG_LEVEL:-info}
+  TRUSTED_PROXY_CIDRS: ${TRUSTED_PROXY_CIDRS:-}
+
+services:
+  postgres:
+    profiles: [local-db]
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-trusts_control}
+      POSTGRES_USER: ${POSTGRES_USER:-trusts_provisioner}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure bootstrap DB password}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: '3'}
+    # No public or host PostgreSQL port.
+
+  app:
+    image: ${APP_IMAGE:-trusts-crm:local}
+    build: {context: ., target: runtime}
+    restart: unless-stopped
+    init: true
+    environment:
+      <<: *runtime-env
+      PORT: ${INTERNAL_PORT:-3000}
+      HOSTNAME: 0.0.0.0
+    ports:
+      - '${APP_BIND:-127.0.0.1}:${APP_PORT:-3000}:${INTERNAL_PORT:-3000}'
+    volumes:
+      - 'attachment-data:${STORAGE_ROOT:-/var/lib/trusts-crm/attachments}'
+      - 'tenant-credentials:${TENANT_CREDENTIALS_DIR:-/run/trusts/tenants}:ro'
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    tmpfs: [/tmp]
+    healthcheck:
+      test: [CMD, node, -e, 'fetch("http://127.0.0.1:" + process.env.PORT + "/internal/health/live").then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))']
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: '3'}
+
+  operator:
+    profiles: [tools]
+    image: ${OPERATOR_IMAGE:-trusts-crm:local-operator}
+    build: {context: ., target: operator}
+    init: true
+    restart: 'no'
+    environment:
+      <<: *runtime-env
+      CONTROL_MIGRATION_DATABASE_URL: ${CONTROL_MIGRATION_DATABASE_URL:?Configure migration DB URL}
+      PROVISION_DATABASE_URL: ${PROVISION_DATABASE_URL:?Configure operator DB URL}
+      SETUP_ORGANISATION_NAME: ${SETUP_ORGANISATION_NAME:-}
+      SETUP_ORGANISATION_SLUG: ${SETUP_ORGANISATION_SLUG:-}
+      SETUP_OWNER_EMAIL: ${SETUP_OWNER_EMAIL:-}
+      SYNTHETIC_DATA_ACK: ${SYNTHETIC_DATA_ACK:-}
+    volumes:
+      - 'attachment-data:${STORAGE_ROOT:-/var/lib/trusts-crm/attachments}'
+      - 'tenant-credentials:${TENANT_CREDENTIALS_DIR:-/run/trusts/tenants}'
+    command: [pnpm, db:migrate]
+    # Privileged database credentials never appear in the app environment.
+    # Operator scripts set private files/volume ownership for the node user.
+
+  mailpit:
+    profiles: [dev-mail]
+    image: axllent/mailpit:v1.27
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:${MAILPIT_UI_PORT:-8025}:8025'
+    # Synthetic local messages only; no public SMTP listener.
+
+volumes:
+  postgres-data:
+  attachment-data:
+  tenant-credentials:
